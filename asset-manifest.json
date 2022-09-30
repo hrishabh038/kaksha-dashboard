@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/kaksha-dashboard/static/css/main.0eaf8a6e.css",
-    "main.js": "/kaksha-dashboard/static/js/main.1dc9701d.js",
+    "main.js": "/kaksha-dashboard/static/js/main.a91c1829.js",
     "index.html": "/kaksha-dashboard/index.html",
     "main.0eaf8a6e.css.map": "/kaksha-dashboard/static/css/main.0eaf8a6e.css.map",
-    "main.1dc9701d.js.map": "/kaksha-dashboard/static/js/main.1dc9701d.js.map"
+    "main.a91c1829.js.map": "/kaksha-dashboard/static/js/main.a91c1829.js.map"
   },
   "entrypoints": [
     "static/css/main.0eaf8a6e.css",
-    "static/js/main.1dc9701d.js"
+    "static/js/main.a91c1829.js"
   ]
 }
