@@ -1,0 +1,42 @@
+.home{
+    padding: 45px 7px;
+}
+.home-container{
+    width: 1100px;
+    margin: auto;
+}
+@media (max-width: 1350px) {
+    .home{
+        padding: 10px 7px;
+    }
+    .home-container{
+        width: 100%;
+    }
+}
+.welcome{
+    font-size: 30px;
+    font-weight: 500;
+    color: #0e0d34;
+}
+.home-overview{
+}
+.home-overview-container{
+    display: flex;
+    align-items: center;
+    overflow: auto;
+}
+.notice-and-lecture{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.home-notice-and-lecture{
+    width: 535px;
+}
+.home-notice{
+    margin-right: 20px;
+}
+.home-notice-container, .home-lecture-container{
+    height: 350px;
+    overflow: auto;
+}

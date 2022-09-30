@@ -1,0 +1,1701 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Animate.css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="Stylesheet/Style.css">
+
+    <title>Kaksha Dashboard</title>
+    <link rel="shortcut icon" type="image/jpg" href="Logo/Cropped Ones/Light Cropped.png" />
+
+</head>
+
+<body style="    background-color: #F2F4F8; font-family: 'Ubuntu', sans-serif;;">
+
+    <div style="display: flex; width: 100%; height: 100vh; overflow: auto; flex-wrap: wrap;">
+
+        <nav class="navigation sticky-top" id="id-navigation" style="width: 225px; display: block;">
+            <div class="logo-toogle">
+                <ul>
+                    <li class="logo-image">
+                        <div class="logo">
+                            <img src="https://i.postimg.cc/TY76JrRF/Kaksha-1.png" alt="">
+                        </div>
+                    </li>
+                    <li class="logo-icon">
+                        <a href="#" id="id-logo-icon-width-manipulation" onclick="navWidthManipulation()">
+                            <div class="toogle">
+                                <span><i id="id-toogle-icon" class='bx bx-toggle-right'></i></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navitaion-buttons">
+                <ul>
+                    <li class="nav-button">
+                        <a href="#" class="nav-button-link">
+                            <div class="nav-icon-logo">
+                                <span><i class='bx bxs-user-circle'></i></span>
+                            </div>
+                            <div class="nav-text">
+                                <span>My Account</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="id-overview-active">
+                        <a href="#" class="nav-button-link" id="id-overview-button" onclick="navigation(this.id)">
+                            <div class="nav-icon">
+                                <span>
+                                    <i class='bx bxs-analyse'></i>
+                                </span>
+                            </div>
+                            <div class="nav-text">
+                                <span>Overview</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="id-meeting-active">
+                        <a href="#" class="nav-button-link" id="id-meeting-button" onclick="navigation(this.id)">
+                            <div class="nav-icon">
+                                <span><i class='bx bxs-videos'></i></span>
+                            </div>
+                            <div class="nav-text">
+                                <span>Meetings</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="id-assingment-active">
+                        <a href="#" class="nav-button-link" id="id-assingment-button" onclick="navigation(this.id)">
+                            <div class="nav-icon-logo">
+                                <span><i class='bx bxs-file-txt'></i></span>
+                            </div>
+                            <div class="nav-text">
+                                <span>Assingments</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="id-interview-prep-active">
+                        <a href="#" class="nav-button-link" id="id-interview-prep-button" onclick="navigation(this.id)">
+                            <div class="nav-icon-logo">
+                                <span><i class='bx bxs-spreadsheet'></i></span>
+                            </div>
+                            <div class="nav-text">
+                                <span>Interview Preprations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="id-scheduled-interview-active">
+                        <a href="#" class="nav-button-link" id="id-schedule-interview-button" onclick="navigation(this.id)">
+                            <div class="nav-icon-logo">
+                                <span><i class='bx bxs-group'></i></span>
+                            </div>
+                            <div class="nav-text">
+                                <span>Scheduled Interviews</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="basic-options">
+                <ul>
+                    <li class="nav-button" id="id-ask-doubt-active">
+                        <a href="#" class="nav-button-link" id="id-ask-doubts-button" onclick="navigation(this.id)">
+                            <div class="nav-icon">
+                                <span>
+                                    <i class='bx bxs-chat'></i>
+                                </span>
+                            </div>
+                            <div class="nav-text">
+                                <span>Ask Doubts</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-button">
+                        <a href="https://hrishabh038.github.io/kaksha.github.io/" class="nav-button-link">
+                            <div class="nav-icon">
+                                <span><i class='bx bxs-log-out-circle'></i></span>
+                            </div>
+                            <div class="nav-text">
+                                <span>Logout</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a id="id-nav-toggle-a" class=" sticky-top" onclick="openCloseNavbar()">
+            <div class="nav-toogle" id="id-nav-toggle">
+                <span id="id-nav-toogle-icon"><i class='bx bx-right-arrow-alt'></i></span>
+            </div>
+        </a>
+
+
+        <main class="overview main-page container" id="id-overview-page" style="scroll-behavior: smooth;">
+
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+
+            <div class="overview-container-card">
+                <div class="heading">
+                    <span>Notice Board</span>
+                </div>
+                <div class="overview-cards-container">
+
+                    <div class="notice-container">
+                        <div class="notice-topic">
+                            <span>Notice Topic</span>
+                        </div>
+                        <div class="notice-date">
+                            <span>
+                                10 October 2021
+                            </span>
+                        </div>
+                        <div class="notice-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi quas numquam
+                                sed molestias delectus ab amet, incidunt mollitia similique vero facilis reiciendis. Est
+                                consectetur fuga quo ut nobis deserunt.</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+
+                    <div class="notice-container">
+                        <div class="notice-topic">
+                            <span>Notice Topic</span>
+                        </div>
+                        <div class="notice-date">
+                            <span>
+                                10 October 2021
+                            </span>
+                        </div>
+                        <div class="notice-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi quas numquam
+                                sed molestias delectus ab amet, incidunt mollitia similique vero facilis reiciendis. Est
+                                consectetur fuga quo ut nobis deserunt.</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+
+                    <div class="notice-container">
+                        <div class="notice-topic">
+                            <span>Notice Topic</span>
+                        </div>
+                        <div class="notice-date">
+                            <span>
+                                10 October 2021
+                            </span>
+                        </div>
+                        <div class="notice-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi quas numquam
+                                sed molestias delectus ab amet, incidunt mollitia similique vero facilis reiciendis. Est
+                                consectetur fuga quo ut nobis deserunt.</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+
+                    <div class="notice-container">
+                        <div class="notice-topic">
+                            <span>Notice Topic</span>
+                        </div>
+                        <div class="notice-date">
+                            <span>
+                                10 October 2021
+                            </span>
+                        </div>
+                        <div class="notice-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi quas numquam
+                                sed molestias delectus ab amet, incidunt mollitia similique vero facilis reiciendis. Est
+                                consectetur fuga quo ut nobis deserunt.</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+
+                    <div class="notice-container">
+                        <div class="notice-topic">
+                            <span>Notice Topic</span>
+                        </div>
+                        <div class="notice-date">
+                            <span>
+                                10 October 2021
+                            </span>
+                        </div>
+                        <div class="notice-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi quas numquam
+                                sed molestias delectus ab amet, incidunt mollitia similique vero facilis reiciendis. Est
+                                consectetur fuga quo ut nobis deserunt.</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+
+                    <div class="notice-container">
+                        <div class="notice-topic">
+                            <span>Notice Topic</span>
+                        </div>
+                        <div class="notice-date">
+                            <span>
+                                10 October 2021
+                            </span>
+                        </div>
+                        <div class="notice-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi quas numquam
+                                sed molestias delectus ab amet, incidunt mollitia similique vero facilis reiciendis. Est
+                                consectetur fuga quo ut nobis deserunt.</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+
+                    <div class="notice-container">
+                        <div class="notice-topic">
+                            <span>Notice Topic</span>
+                        </div>
+                        <div class="notice-date">
+                            <span>
+                                10 October 2021
+                            </span>
+                        </div>
+                        <div class="notice-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi quas numquam
+                                sed molestias delectus ab amet, incidunt mollitia similique vero facilis reiciendis. Est
+                                consectetur fuga quo ut nobis deserunt.</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+
+                    <div class="notice-container">
+                        <div class="notice-topic">
+                            <span>Notice Topic</span>
+                        </div>
+                        <div class="notice-date">
+                            <span>
+                                10 October 2021
+                            </span>
+                        </div>
+                        <div class="notice-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi quas numquam
+                                sed molestias delectus ab amet, incidunt mollitia similique vero facilis reiciendis. Est
+                                consectetur fuga quo ut nobis deserunt.</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+
+                    <div class="notice-container">
+                        <div class="notice-topic">
+                            <span>Notice Topic</span>
+                        </div>
+                        <div class="notice-date">
+                            <span>
+                                10 October 2021
+                            </span>
+                        </div>
+                        <div class="notice-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi quas numquam
+                                sed molestias delectus ab amet, incidunt mollitia similique vero facilis reiciendis. Est
+                                consectetur fuga quo ut nobis deserunt.</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+
+
+                </div>
+            </div>
+
+            <div class="overview-container-card">
+                <div class="heading">
+                    <span>Upcoming Meetings</span>
+                </div>
+                <div class="overview-cards-container">
+
+
+
+                    <a href="#">
+                        <div class="overview-meeting-container">
+                            <div class="overview-meeting-overview">
+                                <div class="overview-meeting-date">
+                                    <span>16</span><br>
+                                    <span>October</span>
+                                </div>
+                                <div class="overview-meeting-topic-day-time-duration">
+                                    <div class="overview-meeting-topic">
+                                        <span>Meeting Topic</span>
+                                    </div>
+                                    <div class="overview-meeting-day-time-duration">
+                                        <div class="overview-meeting-day">
+                                            <span>Friday</span>
+                                        </div>
+                                        <div class="overview-meeting-time">
+                                            <span>10:00 AM</span>
+                                        </div>
+                                        <div class="overview-meeting-duration">
+                                            <span>45 Minutes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="overview-meeting-container">
+                            <div class="overview-meeting-overview">
+                                <div class="overview-meeting-date">
+                                    <span>16</span><br>
+                                    <span>October</span>
+                                </div>
+                                <div class="overview-meeting-topic-day-time-duration">
+                                    <div class="overview-meeting-topic">
+                                        <span>Meeting Topic</span>
+                                    </div>
+                                    <div class="overview-meeting-day-time-duration">
+                                        <div class="overview-meeting-day">
+                                            <span>Friday</span>
+                                        </div>
+                                        <div class="overview-meeting-time">
+                                            <span>10:00 AM</span>
+                                        </div>
+                                        <div class="overview-meeting-duration">
+                                            <span>45 Minutes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="overview-meeting-container">
+                            <div class="overview-meeting-overview">
+                                <div class="overview-meeting-date">
+                                    <span>16</span><br>
+                                    <span>October</span>
+                                </div>
+                                <div class="overview-meeting-topic-day-time-duration">
+                                    <div class="overview-meeting-topic">
+                                        <span>Meeting Topic</span>
+                                    </div>
+                                    <div class="overview-meeting-day-time-duration">
+                                        <div class="overview-meeting-day">
+                                            <span>Friday</span>
+                                        </div>
+                                        <div class="overview-meeting-time">
+                                            <span>10:00 AM</span>
+                                        </div>
+                                        <div class="overview-meeting-duration">
+                                            <span>45 Minutes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="overview-container-card">
+                <div class="heading">
+                    <span>Enrolled Courses</span>
+                </div>
+                <div class="overview-cards-container course-cards-container">
+
+                    <div class="cource-card">
+
+                        <div class="course-card-container">
+                            <div class="course-card-icon">
+                                <span><i class='bx bxl-nodejs'></i></span>
+                            </div>
+                            <div class="course-topic">
+                                <div class="course-topic-heading">
+                                    <span>Frontend Development</span>
+                                </div>
+                                <div class="course-topic-content">
+                                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                                </div>
+                            </div>
+                            <div class="course-duration-attendence">
+                                <div class="course-duration">
+                                    <span>60 days left</span>
+                                </div>
+                                <div class="course-attendence">
+                                    <span>Attendence : </span>
+                                    <span>20/60</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cource-card">
+
+                        <div class="course-card-container">
+                            <div class="course-card-icon">
+                                <span><i class='bx bxl-nodejs'></i></span>
+                            </div>
+                            <div class="course-topic">
+                                <div class="course-topic-heading">
+                                    <span>Node Js</span>
+                                </div>
+                                <div class="course-topic-content">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                                </div>
+                            </div>
+                            <div class="course-duration-attendence">
+                                <div class="course-duration">
+                                    <span>60 days left</span>
+                                </div>
+                                <div class="course-attendence">
+                                    <span>Attendence : </span>
+                                    <span>20/60</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cource-card">
+
+                        <div class="course-card-container">
+                            <div class="course-card-icon">
+                                <span><i class='bx bxl-nodejs'></i></span>
+                            </div>
+                            <div class="course-topic">
+                                <div class="course-topic-heading">
+                                    <span>Interview Prepration</span>
+                                </div>
+                                <div class="course-topic-content">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <div class="course-duration-attendence">
+                                <div class="course-duration">
+                                    <span>60 days left</span>
+                                </div>
+                                <div class="course-attendence">
+                                    <span>Attendence : </span>
+                                    <span>20/60</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="overview-container-card">
+                <div class="heading">
+                    <span>Recommendations</span>
+                </div>
+                <div class="overview-cards-container">
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="recommendation-card">
+                            <div class="recommendation-card-container">
+                                <div class="recommendation-card-thumbnail">
+                                    <img src="https://img.youtube.com/vi/hBh_CC5y8-s/0.jpg" alt="">
+                                </div>
+                                <div class="recommendation-card-title">
+                                    <span>Java Full Course | Java Tutorial for Beginners | Java Online Training |
+                                        Edureka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+
+        </main>
+
+        <main class="meetings main-page container" id="id-meeting-page" style="scroll-behavior: smooth;">
+
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+
+            <div class="meetings-container-card">
+                <div class="heading">
+                    <span>Today's Meetings</span>
+                </div>
+
+                <div class="meetings-cards-container todays-meetings-cards-container-height">
+
+                    <a href="#" style="text-align: start;">
+                        <div class="todays-meetings-card">
+
+                            <div class="todays-meetings-card-container">
+                                <div class="todays-meetings-card-icon">
+                                    <span><i class='bx bxl-nodejs'></i></span>
+                                </div>
+                                <div class="todays-meetings-topic">
+                                    <div class="todays-meetings-topic-heading">
+                                        <span>Frontend Development</span>
+                                    </div>
+                                    <div class="todays-meetings-topic-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                                    </div>
+                                </div>
+                                <div class="todays-meetings-day-time-duration">
+                                    <div class="todays-meetings-day">
+                                        <span>Friday</span>
+                                    </div>
+                                    <div class="todays-meetings-time">
+                                        --<span> 10:00 AM </span>--
+                                    </div>
+                                    <div class="todays-meetings-duration">
+                                        <span>45 Mins</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#" style="text-align: start;">
+                        <div class="todays-meetings-card">
+
+                            <div class="todays-meetings-card-container">
+                                <div class="todays-meetings-card-icon">
+                                    <span><i class='bx bxl-nodejs'></i></span>
+                                </div>
+                                <div class="todays-meetings-topic">
+                                    <div class="todays-meetings-topic-heading">
+                                        <span>Frontend Development</span>
+                                    </div>
+                                    <div class="todays-meetings-topic-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                                    </div>
+                                </div>
+                                <div class="todays-meetings-day-time-duration">
+                                    <div class="todays-meetings-day">
+                                        <span>Friday</span>
+                                    </div>
+                                    <div class="todays-meetings-time">
+                                        --<span> 10:00 AM </span>--
+                                    </div>
+                                    <div class="todays-meetings-duration">
+                                        <span>45 Mins</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#" style="text-align: start;">
+                        <div class="todays-meetings-card">
+
+                            <div class="todays-meetings-card-container">
+                                <div class="todays-meetings-card-icon">
+                                    <span><i class='bx bxl-nodejs'></i></span>
+                                </div>
+                                <div class="todays-meetings-topic">
+                                    <div class="todays-meetings-topic-heading">
+                                        <span>Frontend Development</span>
+                                    </div>
+                                    <div class="todays-meetings-topic-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                                    </div>
+                                </div>
+                                <div class="todays-meetings-day-time-duration">
+                                    <div class="todays-meetings-day">
+                                        <span>Friday</span>
+                                    </div>
+                                    <div class="todays-meetings-time">
+                                        --<span> 10:00 AM </span>--
+                                    </div>
+                                    <div class="todays-meetings-duration">
+                                        <span>45 Mins</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+
+
+            <div class="meetings-container-card">
+                <div class="heading">
+                    <span>Meetings History</span>
+                </div>
+
+
+                <div class="meetings-cards-container history-meetings-cards-container-height">
+
+                    <div class="history-meeting-card">
+                        <div class="history-meeting-video-frame">
+                            <iframe width="247" height="162" src="https://www.youtube-nocookie.com/embed/W--ix1ycRk4"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="history-meeting-date-time">
+                            <div class="history-meetings-topic-heading">
+                                <span>Frontend Development</span>
+                            </div>
+                            <div class="history-meeting-date">
+                                <span class="history-meeting-icon"><i class='bx bxs-calendar'></i></span>
+                                <span class="history-meeting-text">27 January, 2001</span>
+                            </div>
+                            <div class="history-meeting-time">
+                                <span class="history-meeting-icon"><i class='bx bxs-timer'></i></span>
+                                <span class="history-meeting-text">10:00 AM</span>
+                            </div>
+                            <a href="#" style="margin: 5px;">
+                                <div class="history-meeting-time">
+                                    <span class="history-meeting-icon"><i class='bx bxs-download'></i></span>
+                                    <span class="history-meeting-text">Download Notes</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="history-meeting-card">
+                        <div class="history-meeting-video-frame">
+                            <iframe width="247" height="162" src="https://www.youtube-nocookie.com/embed/W--ix1ycRk4"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="history-meeting-date-time">
+                            <div class="history-meetings-topic-heading">
+                                <span>Frontend Development</span>
+                            </div>
+                            <div class="history-meeting-date">
+                                <span class="history-meeting-icon"><i class='bx bxs-calendar'></i></span>
+                                <span class="history-meeting-text">27 January, 2001</span>
+                            </div>
+                            <div class="history-meeting-time">
+                                <span class="history-meeting-icon"><i class='bx bxs-timer'></i></span>
+                                <span class="history-meeting-text">10:00 AM</span>
+                            </div>
+                            <a href="#" style="margin: 5px;">
+                                <div class="history-meeting-time">
+                                    <span class="history-meeting-icon"><i class='bx bxs-download'></i></span>
+                                    <span class="history-meeting-text">Download Notes</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="history-meeting-card">
+                        <div class="history-meeting-video-frame">
+                            <iframe width="247" height="162" src="https://www.youtube-nocookie.com/embed/W--ix1ycRk4"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="history-meeting-date-time">
+                            <div class="history-meetings-topic-heading">
+                                <span>Frontend Development</span>
+                            </div>
+                            <div class="history-meeting-date">
+                                <span class="history-meeting-icon"><i class='bx bxs-calendar'></i></span>
+                                <span class="history-meeting-text">27 January, 2001</span>
+                            </div>
+                            <div class="history-meeting-time">
+                                <span class="history-meeting-icon"><i class='bx bxs-timer'></i></span>
+                                <span class="history-meeting-text">10:00 AM</span>
+                            </div>
+                            <a href="#" style="margin: 5px;">
+                                <div class="history-meeting-time">
+                                    <span class="history-meeting-icon"><i class='bx bxs-download'></i></span>
+                                    <span class="history-meeting-text">Download Notes</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="history-meeting-card">
+                        <div class="history-meeting-video-frame">
+                            <iframe width="247" height="162" src="https://www.youtube-nocookie.com/embed/W--ix1ycRk4"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="history-meeting-date-time">
+                            <div class="history-meetings-topic-heading">
+                                <span>Frontend Development</span>
+                            </div>
+                            <div class="history-meeting-date">
+                                <span class="history-meeting-icon"><i class='bx bxs-calendar'></i></span>
+                                <span class="history-meeting-text">27 January, 2001</span>
+                            </div>
+                            <div class="history-meeting-time">
+                                <span class="history-meeting-icon"><i class='bx bxs-timer'></i></span>
+                                <span class="history-meeting-text">10:00 AM</span>
+                            </div>
+                            <a href="#" style="margin: 5px;">
+                                <div class="history-meeting-time">
+                                    <span class="history-meeting-icon"><i class='bx bxs-download'></i></span>
+                                    <span class="history-meeting-text">Download Notes</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="history-meeting-card">
+                        <div class="history-meeting-video-frame">
+                            <iframe width="247" height="162" src="https://www.youtube-nocookie.com/embed/W--ix1ycRk4"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="history-meeting-date-time">
+                            <div class="history-meetings-topic-heading">
+                                <span>Frontend Development</span>
+                            </div>
+                            <div class="history-meeting-date">
+                                <span class="history-meeting-icon"><i class='bx bxs-calendar'></i></span>
+                                <span class="history-meeting-text">27 January, 2001</span>
+                            </div>
+                            <div class="history-meeting-time">
+                                <span class="history-meeting-icon"><i class='bx bxs-timer'></i></span>
+                                <span class="history-meeting-text">10:00 AM</span>
+                            </div>
+                            <a href="#" style="margin: 5px;">
+                                <div class="history-meeting-time">
+                                    <span class="history-meeting-icon"><i class='bx bxs-download'></i></span>
+                                    <span class="history-meeting-text">Download Notes</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </main>
+
+        <main class="assingments main-page container" id="id-assingment-page" style="scroll-behavior: smooth;">
+
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+
+            <div class="assingments-container-card">
+                <div class="heading">
+                    <span>Assingments</span>
+                </div>
+
+                <div class="assingments-cards-container">
+
+                    <div class="assingment-card">
+                        <table class="assingment-table">
+                            <tr class="table-row">
+                                <th colspan="2" class="assingment-heading">Assingments 1</th>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Name</th>
+                                <td class="table-data">Hrishabh Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Status</th>
+                                <td class="table-data">Not Submitted</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Submition date</th>
+                                <td class="table-data">22 December 2021</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Actions</th>
+                                <td class="table-data download-upload">
+                                    <a href="#">
+                                        <div class="download">
+                                            <span><i class='bx bxs-download'></i></span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="upload">
+                                            <span><i class='bx bx-upload'></i></span>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Assigned by</th>
+                                <td class="table-data">Rishika Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Subject</th>
+                                <td class="table-data">Node Js</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Related topic</th>
+                                <td class="table-data">Lorem ipsum, Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Cum sit, illo asperiores temporibus reiciendis, quo aliquid, quidem qui id
+                                    tempora accusamus quas odit placeat expedita veniam dolore nam ullam sapiente?
+                                    dolor
+                                    sit amet consectetur adipisicing elit.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="assingment-card">
+                        <table class="assingment-table">
+                            <tr class="table-row">
+                                <th colspan="2" class="assingment-heading">Assingments 1</th>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Name</th>
+                                <td class="table-data">Hrishabh Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Status</th>
+                                <td class="table-data">Not Submitted</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Submition date</th>
+                                <td class="table-data">22 December 2021</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Actions</th>
+                                <td class="table-data download-upload">
+                                    <a href="#">
+                                        <div class="download">
+                                            <span><i class='bx bxs-download'></i></span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="upload">
+                                            <span><i class='bx bx-upload'></i></span>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Assigned by</th>
+                                <td class="table-data">Rishika Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Subject</th>
+                                <td class="table-data">Node Js</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Related topic</th>
+                                <td class="table-data">Lorem ipsum, Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Cum sit, illo asperiores temporibus reiciendis, quo aliquid, quidem qui id
+                                    tempora accusamus quas odit placeat expedita veniam dolore nam ullam sapiente?
+                                    dolor
+                                    sit amet consectetur adipisicing elit.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="assingment-card">
+                        <table class="assingment-table">
+                            <tr class="table-row">
+                                <th colspan="2" class="assingment-heading">Assingments 1</th>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Name</th>
+                                <td class="table-data">Hrishabh Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Status</th>
+                                <td class="table-data">Not Submitted</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Submition date</th>
+                                <td class="table-data">22 December 2021</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Actions</th>
+                                <td class="table-data download-upload">
+                                    <a href="#">
+                                        <div class="download">
+                                            <span><i class='bx bxs-download'></i></span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="upload">
+                                            <span><i class='bx bx-upload'></i></span>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Assigned by</th>
+                                <td class="table-data">Rishika Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Subject</th>
+                                <td class="table-data">Node Js</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Related topic</th>
+                                <td class="table-data">Lorem ipsum, Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Cum sit, illo asperiores temporibus reiciendis, quo aliquid, quidem qui id
+                                    tempora accusamus quas odit placeat expedita veniam dolore nam ullam sapiente?
+                                    dolor
+                                    sit amet consectetur adipisicing elit.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="assingment-card">
+                        <table class="assingment-table">
+                            <tr class="table-row">
+                                <th colspan="2" class="assingment-heading">Assingments 1</th>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Name</th>
+                                <td class="table-data">Hrishabh Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Status</th>
+                                <td class="table-data">Not Submitted</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Submition date</th>
+                                <td class="table-data">22 December 2021</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Actions</th>
+                                <td class="table-data download-upload">
+                                    <a href="#">
+                                        <div class="download">
+                                            <span><i class='bx bxs-download'></i></span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="upload">
+                                            <span><i class='bx bx-upload'></i></span>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Assigned by</th>
+                                <td class="table-data">Rishika Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Subject</th>
+                                <td class="table-data">Node Js</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Related topic</th>
+                                <td class="table-data">Lorem ipsum, Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Cum sit, illo asperiores temporibus reiciendis, quo aliquid, quidem qui id
+                                    tempora accusamus quas odit placeat expedita veniam dolore nam ullam sapiente?
+                                    dolor
+                                    sit amet consectetur adipisicing elit.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="assingment-card">
+                        <table class="assingment-table">
+                            <tr class="table-row">
+                                <th colspan="2" class="assingment-heading">Assingments 1</th>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Name</th>
+                                <td class="table-data">Hrishabh Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Status</th>
+                                <td class="table-data">Not Submitted</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Submition date</th>
+                                <td class="table-data">22 December 2021</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Actions</th>
+                                <td class="table-data download-upload">
+                                    <a href="#">
+                                        <div class="download">
+                                            <span><i class='bx bxs-download'></i></span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="upload">
+                                            <span><i class='bx bx-upload'></i></span>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Assigned by</th>
+                                <td class="table-data">Rishika Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Subject</th>
+                                <td class="table-data">Node Js</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Related topic</th>
+                                <td class="table-data">Lorem ipsum, Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Cum sit, illo asperiores temporibus reiciendis, quo aliquid, quidem qui id
+                                    tempora accusamus quas odit placeat expedita veniam dolore nam ullam sapiente?
+                                    dolor
+                                    sit amet consectetur adipisicing elit.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+        <main class="interview-prep main-page container" id="id-interview-prep-page" style="scroll-behavior: smooth;">
+
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+
+            <div class="interview-prep-container-card">
+                <div class="heading">
+                    <span>Interview Form</span>
+                </div>
+                <div class="interview-prep-cards-container">
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                    <div class="interview-prep-form">
+                        <div class="interview-prep-question">
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint,
+                                exercitationem esse aliquid cupiditate illo magni ut. Aspernatur perferendis provident
+                                enim ex! Ratione ipsam in, magnam quo deleniti sunt pariatur.</span>
+                        </div>
+                        <div class="interview-prep-answere">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Type your doubts here"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interview-prep-container-card">
+                <div class="heading">
+                    <span>Company's Assingments</span>
+                </div>
+
+                <div class="interview-prep-cards-container">
+
+                    <div class="interview-prep-card">
+                        <table class="interview-prep-table">
+                            <tr class="table-row">
+                                <th colspan="2" class="interview-prep-heading">Assingments 1</th>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Name</th>
+                                <td class="table-data">Hrishabh Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Status</th>
+                                <td class="table-data">Not Submitted</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Submition date</th>
+                                <td class="table-data">22 December 2021</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Actions</th>
+                                <td class="table-data download-upload">
+                                    <a href="#">
+                                        <div class="download">
+                                            <span><i class='bx bxs-download'></i></span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="upload">
+                                            <span><i class='bx bx-upload'></i></span>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Assigned by</th>
+                                <td class="table-data">Rishika Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Subject</th>
+                                <td class="table-data">Node Js</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Related topic</th>
+                                <td class="table-data">Lorem ipsum, Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Cum sit, illo asperiores temporibus reiciendis, quo aliquid, quidem qui id
+                                    tempora accusamus quas odit placeat expedita veniam dolore nam ullam sapiente?
+                                    dolor
+                                    sit amet consectetur adipisicing elit.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </main>
+
+        <main class="scheduled-interview main-page container" id="id-scheduled-interview-page" style="scroll-behavior: smooth;">
+
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+
+            <div class="scheduled-interview-container-card">
+                <div class="heading">
+                    <span>Scheduled Interview</span>
+                </div>
+
+                <div class="scheduled-interview-cards-container">
+
+                    <div class="scheduled-interview-card">
+                        <table class="scheduled-interview-table">
+                            <tr class="table-row">
+                                <th colspan="2" class="scheduled-interview-heading">Assingments 1</th>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Company Name</th>
+                                <td class="table-data">Newton School</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Resume Status</th>
+                                <td class="table-data">Submitted</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Interview Date</th>
+                                <td class="table-data">22 December 2021</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Actions</th>
+                                <td class="table-data download-upload">
+                                    <a href="#">
+                                        <div class="download">
+                                            <span><i class='bx bxs-log-in'></i></span>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Interviewer</th>
+                                <td class="table-data">Rishika Jain</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Role Offered</th>
+                                <td class="table-data">Node Js Developer</td>
+                            </tr>
+                            <tr class="table-row">
+                                <th class="table-heading">Brief</th>
+                                <td class="table-data">Lorem ipsum, Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Cum sit, illo asperiores temporibus reiciendis, quo aliquid, quidem qui id
+                                    tempora accusamus quas odit placeat expedita veniam dolore nam ullam sapiente?
+                                    dolor
+                                    sit amet consectetur adipisicing elit.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <main class="ask-doubt main-page container" id="id-ask-doubts-page" style="scroll-behavior: smooth;">
+
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+
+            <div class="ask-doubt-container-card">
+                <div class="heading">
+                    <span>Ask Doubt</span>
+                </div>
+                <div class="ask-doubt-cards-container">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type your doubts here"></textarea>
+                </div>
+            </div>
+
+            <div class="ask-doubt-container-card">
+                <div class="heading">
+                    <span>Asked Doubt</span>
+                </div>
+                <div class="ask-doubt-cards-container">
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="asked-doubt-card">
+                        <table>
+                            <tr>
+                                <th>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore eos debitis,
+                                    voluptates nemo tempore in ut vero deleniti praesentium a! Placeat tempore vitae
+                                    quam fugit aliquid numquam officiis cum?</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus porro autem
+                                    in modi consequatur laudantium aspernatur, nobis sed nesciunt voluptate cupiditate
+                                    accusantium, molestiae similique dolor nihil dicta odio odit vitae! Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Voluptates explicabo suscipit natus
+                                    laborum perspiciatis et expedita est fugit, facere provident ut quisquam blanditiis
+                                    quas ab, magni molestias quod impedit nihil.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    <!-- scripts -->
+    <script src="Script/Script.js"></script>
+    <script src="Script/navigation.js"></script>
+
+</body>
+
+</html>

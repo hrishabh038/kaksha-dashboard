@@ -1,0 +1,40 @@
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    z-index: 10001;
+    /* flex: 0 0 240px; */
+    height: 100vh;
+    background: #0e0d34;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+@media (max-width: 1200px) {
+    nav {
+        position: fixed;
+    }
+}
+
+.nav-logo {
+    margin: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo img {
+    width: 85px;
+}
+
+.nav-logo i {
+    cursor: pointer;
+    font-size: 32px;
+    color: white;
+}
+
+.nav-controller {
+    margin: 5rem 0px;
+}

@@ -1,0 +1,52 @@
+.lecture-teaser{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.lecture-teaser-date{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #ffffff8a;
+    border: 0.5px solid #bfbfbf;
+    background: white;
+    text-align: center;
+    border-radius: 7px;
+    padding: 5px;
+    width: 72px;
+    height: 72px;
+
+}
+.lecture-teaser-month-year{
+    color: gray;
+    font-size: 12px;
+}
+.lecture-teaser-day{
+    font-size: 30px;
+    font-weight: bold;
+}
+.lecture-teaser-course-color{
+    background-color: white;
+    width: 3px;
+    height: 55px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.lecture-teasure-topic-time{
+
+}
+.lecture-teaser-time{
+    font-size: 12px;
+    font-weight: bold;
+}
+.lecture-teaser-time-starts-at{
+    color: white;
+}
+.lecture-teaser-time-span{
+    color: black;
+}
+
+.lecture-teaser-topic{
+    font-size: 20px;
+}

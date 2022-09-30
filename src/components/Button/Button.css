@@ -1,0 +1,31 @@
+.router-button{
+    padding: 5px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.circular-button{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: inline-table;
+    border: 0.5px solid #bfbfbf;
+    border-radius: 500px;
+    padding: 15px;
+    background-color: #ffffff8a;
+    position: relative;
+}
+.circular-button i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+}
+.circular-button span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
