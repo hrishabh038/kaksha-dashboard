@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/kaksha-dashboard/static/css/main.0eaf8a6e.css",
-    "main.js": "/kaksha-dashboard/static/js/main.a91c1829.js",
+    "main.css": "/kaksha-dashboard/static/css/main.cdd8bd6e.css",
+    "main.js": "/kaksha-dashboard/static/js/main.527595c2.js",
+    "static/media/javascript.png": "/kaksha-dashboard/static/media/javascript.ccf8dc8f03f327da4b2d.png",
+    "static/media/java.png": "/kaksha-dashboard/static/media/java.d93d7adaf67598b35775.png",
     "index.html": "/kaksha-dashboard/index.html",
-    "main.0eaf8a6e.css.map": "/kaksha-dashboard/static/css/main.0eaf8a6e.css.map",
-    "main.a91c1829.js.map": "/kaksha-dashboard/static/js/main.a91c1829.js.map"
+    "main.cdd8bd6e.css.map": "/kaksha-dashboard/static/css/main.cdd8bd6e.css.map",
+    "main.527595c2.js.map": "/kaksha-dashboard/static/js/main.527595c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.0eaf8a6e.css",
-    "static/js/main.a91c1829.js"
+    "static/css/main.cdd8bd6e.css",
+    "static/js/main.527595c2.js"
   ]
 }
